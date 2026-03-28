@@ -1,87 +1,143 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phạm Trọng Trường - Senior .NET Developer</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: white; }
-        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 1.5rem; }
-        .skill-tag { background: #1e293b; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; border: 1px solid #334155; }
-        /* Đảm bảo chữ tiêu đề luôn có màu trắng để dễ thấy */
-        #typed { color: #60a5fa; font-weight: bold; }
-        .typed-cursor { color: white; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senior .NET Developer - Pham Trong Truong</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    // Dark mode toggle
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+    }
+
+    // Scroll animation
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100','translate-y-0');
+          }
+        });
+      });
+      elements.forEach(el => observer.observe(el));
+    });
+
+    // Scroll highlight nav
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('text-orange-400');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('text-orange-400');
+        }
+      });
+    });
+  </script>
 </head>
-<body class="overflow-x-hidden">
 
-    <section class="min-h-screen flex items-center justify-center relative px-4 text-center">
-        <div class="z-10">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight" data-aos="fade-down">
-                PHẠM TRỌNG TRƯỜNG
-            </h1>
-            
-            <div class="text-2xl md:text-4xl h-16">
-                <span id="typed">Senior .NET Developer</span>
-            </div>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white font-sans dark:bg-white dark:text-black">
 
-            <div class="flex flex-wrap justify-center gap-6 text-gray-400 my-10" data-aos="fade-up" data-aos-delay="200">
-                <span><i class="fas fa-code-branch mr-2"></i> Nearly 5 Years Exp</span>
-                <span><i class="fas fa-envelope mr-2"></i> phamtruong0305@gmail.com</span>
-                <span><i class="fas fa-map-marker-alt mr-2"></i> District 7, HCM</span>
-            </div>
+<!-- Navbar -->
+<nav class="fixed top-0 w-full bg-black/50 backdrop-blur z-50 px-6 py-3 flex justify-between">
+  <div class="font-bold">TRUONG</div>
+  <div class="space-x-4 text-sm">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#skills" class="nav-link">Skills</a>
+  </div>
+  <button onclick="toggleTheme()">🌗</button>
+</nav>
 
-            <a href="#experience" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-blue-500/50">
-                XEM KINH NGHIỆM <i class="fas fa-arrow-down ml-2"></i>
-            </a>
-        </div>
-    </section>
+<div class="max-w-6xl mx-auto px-4 pt-24 pb-10">
 
-    <main id="experience" class="max-w-5xl mx-auto py-20 px-6">
-        <h2 class="text-3xl font-bold mb-12 border-l-4 border-blue-500 pl-4" data-aos="fade-right">KINH NGHIỆM LÀM VIỆC</h2>
-        
-        <div class="space-y-12">
-            <div class="glass-card" data-aos="fade-up">
-                <div class="flex flex-col md:flex-row justify-between mb-4">
-                    <h3 class="text-xl font-bold text-blue-400">FPT IS - Software Developer</h3>
-                    <span class="text-gray-400">10/2023 - Nay</span>
-                </div>
-                <p class="font-semibold mb-2 italic">Dự án: PeopleX (HR Management System)</p>
-                <ul class="text-gray-300 list-disc ml-5 space-y-2">
-                    <li>Xây dựng module Integration kết nối hệ thống vệ tinh qua Kong Gateway & RabbitMQ.</li>
-                    <li>Mã hóa dữ liệu nhạy cảm và phân quyền API linh hoạt mức field-level.</li>
-                </ul>
-            </div>
+<!-- About -->
+<section id="about" class="fade-in opacity-0 translate-y-6 transition-all duration-700">
+  <h1 class="text-3xl font-bold">PHAM TRONG TRUONG</h1>
+  <p class="text-orange-400 font-semibold mt-2">Senior .NET Developer</p>
+  <p class="mt-4 text-gray-300 dark:text-gray-700">
+    5+ years experience in enterprise systems, microservices architecture, and high-performance backend.
+    Strong in system design, optimization, and large-scale data processing.
+  </p>
+</section>
 
-            <div class="glass-card" data-aos="fade-up">
-                <div class="flex flex-col md:flex-row justify-between mb-4">
-                    <h3 class="text-xl font-bold text-blue-400">FPT Telecom - Backend Developer</h3>
-                    <span class="text-gray-400">05/2021 - 10/2023</span>
-                </div>
-                <p class="font-semibold mb-2 italic">Dự án: Register Online (shop.fpt.vn)</p>
-                <ul class="text-gray-300 list-disc ml-5 space-y-2">
-                    <li>Tích hợp các cổng thanh toán (Momo, Foxpay, Visa) và xử lý Big Data trên MongoDB.</li>
-                </ul>
-            </div>
-        </div>
-    </main>
+<!-- Experience -->
+<section id="experience" class="mt-10 fade-in opacity-0 translate-y-6 transition-all duration-700">
+  <h2 class="text-xl font-bold mb-4">Experience</h2>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <div class="space-y-6">
+    <div class="p-4 bg-white/10 rounded-xl">
+      <h3 class="font-bold">FPT IS</h3>
+      <p class="text-sm text-gray-400">2023 - Present</p>
+      <p class="text-sm mt-2">Built HRM system, microservices, handled millions records</p>
+    </div>
 
-    <script>
-        // Đợi toàn bộ trang web load xong mới chạy script
-        window.onload = function() {
-            // Khởi tạo hiệu ứng xuất hiện
-            if (typeof AOS !== 'undefined') {
-                AOS.init({ duration: 800, once: true });
-            }
+    <div class="p-4 bg-white/10 rounded-xl">
+      <h3 class="font-bold">FPT Telecom</h3>
+      <p class="text-sm text-gray-400">2021 - 2023</p>
+      <p class="text-sm mt-2">Payment integration, performance optimization</p>
+    </div>
+  </div>
+</section>
 
-            // Khởi tạo hiệu ứng gõ chữ
-            if (document.getElementById('typed') && typeof Typed !== 'undefined')
+<!-- Projects -->
+<section id="projects" class="mt-10 fade-in opacity-0 translate-y-6 transition-all duration-700">
+  <h2 class="text-xl font-bold mb-4">Projects</h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white/10 rounded-xl overflow-hidden hover:scale-105 transition">
+      <img src="https://picsum.photos/500/300" class="w-full" />
+      <div class="p-4">
+        <h3 class="font-bold">HRM System</h3>
+        <p class="text-sm text-gray-300 mt-2">Microservices system with high scalability</p>
+      </div>
+    </div>
+
+    <div class="bg-white/10 rounded-xl overflow-hidden hover:scale-105 transition">
+      <img src="https://picsum.photos/500/301" class="w-full" />
+      <div class="p-4">
+        <h3 class="font-bold">E-commerce Platform</h3>
+        <p class="text-sm text-gray-300 mt-2">Handled payments, caching, large traffic</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="mt-10 fade-in opacity-0 translate-y-6 transition-all duration-700">
+  <h2 class="text-xl font-bold mb-4">Skills</h2>
+
+  <div class="space-y-4">
+    <div>
+      <p>.NET Core</p>
+      <div class="w-full bg-gray-700 h-2 rounded">
+        <div class="bg-orange-400 h-2 rounded w-[90%]"></div>
+      </div>
+    </div>
+
+    <div>
+      <p>SQL</p>
+      <div class="w-full bg-gray-700 h-2 rounded">
+        <div class="bg-orange-400 h-2 rounded w-[85%]"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+</body>
+</html>
