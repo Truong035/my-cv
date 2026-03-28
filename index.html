@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phạm Trọng Trường - .NET Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .skill-badge { background: #e2e8f0; color: #1e293b; padding: 4px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 500; display: inline-block; margin: 2px; }
+        .project-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-slate-900 text-white py-12 px-4 shadow-lg">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-bold tracking-tight">PHẠM TRỌNG TRƯỜNG</h1>
+                <p class="text-xl text-blue-400 mt-2 font-medium">Senior .NET Developer / Full-stack Specialist</p>
+                <div class="mt-4 space-y-2 text-gray-300">
+                    <p><i class="fas fa-map-marker-alt w-6 text-blue-400"></i> Q7, Ho Chi Minh City, Viet Nam</p>
+                    <p><i class="fas fa-phone w-6 text-blue-400"></i> 0353 573 467</p>
+                    <p><i class="fas fa-envelope w-6 text-blue-400"></i> phamtruong0305@gmail.com</p>
+                </div>
+            </div>
+            <div class="mt-8 md:mt-0 flex gap-4">
+                <a href="https://www.linkedin.com/in/trường-phạm-16252b216" class="text-3xl hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-3xl hover:text-gray-400 transition"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto py-10 px-4">
+        
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold border-b-4 border-blue-500 inline-block mb-4 uppercase">Giới thiệu</h2>
+            <p class="text-lg leading-relaxed text-gray-700 italic">
+                Lập trình viên với gần 5 năm kinh nghiệm trong hệ sinh thái .NET và Node.js. Chuyên sâu về kiến trúc Microservices, API Gateway và Cloud. Có tư duy giải quyết vấn đề tốt, khả năng tự nghiên cứu và áp dụng công nghệ mới hiệu quả (như .NET 9, FastEndpoints).
+            </p>
+        </section>
+
+        <section class="mb-10 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-bold mb-6 uppercase flex items-center"><i class="fas fa-code-branch mr-3 text-blue-600"></i> Kỹ năng chính</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-bold text-blue-700 mb-2">Back-end</h3>
+                    <div class="flex flex-wrap">
+                        <span class="skill-badge">.NET Core/9</span> <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Web API</span> <span class="skill-badge">ABP Framework</span>
+                        <span class="skill-badge">RabbitMQ/Kafka</span> <span class="skill-badge">Microservices</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-blue-700 mb-2">Front-end & DB</h3>
+                    <div class="flex flex-wrap">
+                        <span class="skill-badge">ReactJS</span> <span class="skill-badge">Radzen Blazor</span>
+                        <span class="skill-badge">PostgreSQL</span> <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">Redis</span> <span class="skill-badge">SQL Server</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-6 uppercase flex items-center"><i class="fas fa-briefcase mr-3 text-blue-600"></i> Kinh nghiệm làm việc</h2>
+            
+            <div class="mb-8 border-l-4 border-blue-600 pl-4 relative">
+                <div class="absolute w-4 h-4 bg-blue-600 rounded-full -left-2.5 top-2"></div>
+                <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-xl font-bold text-slate-800 uppercase">FPT IS - Developer</h3>
+                    <span class="text-gray-500 font-semibold italic">10/2023 - Hiện tại</span>
+                </div>
+                <div class="mb-4">
+                    <p class="font-bold text-blue-600 underline text-sm uppercase">Dự án: PeopleX (HR Management System)</p>
+                    <ul class="list-disc list-outside ml-5 text-gray-700 space-y-1 mt-2">
+                        <li>Xây dựng hệ thống tích hợp (Integration) trung tâm kết nối các công ty thành viên FPT sử dụng <b>Kong Gateway & RabbitMQ</b>.</li>
+                        <li>Phát triển Dynamic API phân quyền theo field-level và mã hóa dữ liệu nhạy cảm (Lương, ID) đảm bảo an toàn thông tin.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold text-blue-600 underline text-sm uppercase">Dự án: LABO / FONTWORK</p>
+                    <p class="text-gray-700 mt-1">Xây dựng kiến trúc hệ thống đăng nhập tập trung và các app tracking chạy bộ trên Node.js & React.js.</p>
+                </div>
+            </div>
+
+            <div class="mb-8 border-l-4 border-gray-400 pl-4 relative">
+                <div class="absolute w-4 h-4 bg-gray-400 rounded-full -left-2.5 top-2"></div>
+                <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-xl font-bold text-slate-800 uppercase">FPT Telecom - Backend Developer</h3>
+                    <span class="text-gray-500 font-semibold italic">05/2021 - 10/2023</span>
+                </div>
+                <p class="font-bold text-blue-600 underline text-sm uppercase">Dự án: Register Online (shop.fpt.vn)</p>
+                <ul class="list-disc list-outside ml-5 text-gray-700 space-y-1 mt-2">
+                    <li>Quản lý tích hợp các cổng thanh toán Momo, Foxpay, Visa, Napas...</li>
+                    <li>Tối ưu hóa query dữ liệu lớn (Big Data) trên MongoDB và SQL Server để cải thiện hiệu năng báo cáo.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-6 uppercase flex items-center"><i class="fas fa-rocket mr-3 text-blue-600"></i> Sản phẩm tiêu biểu</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <a href="https://uniwaylogistics.net/" class="project-card bg-white p-3 rounded shadow text-center text-sm font-semibold hover:bg-blue-50">Uniway Logistics</a>
+                <a href="https://psdi.com.vn/" class="project-card bg-white p-3 rounded shadow text-center text-sm font-semibold hover:bg-blue-50">PSDI</a>
+                <a href="https://xettuyen.utc.edu.vn/" class="project-card bg-white p-3 rounded shadow text-center text-sm font-semibold hover:bg-blue-50">UTC Admission</a>
+                <a href="https://student.ueh.edu.vn/" class="project-card bg-white p-3 rounded shadow text-center text-sm font-semibold hover:bg-blue-50">UEH Student</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-gray-400 py-8 text-center text-sm">
+        <p>&copy; 2026 Phạm Trọng Trường. Build with Tailwind CSS & Hosted on GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
