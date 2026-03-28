@@ -3,141 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Senior .NET Developer - Pham Trong Truong</title>
+  <title>Middle .NET Developer - Pham Trong Truong</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-up{opacity:0;transform:translateY(30px);transition:.8s}
+    .fade-up.show{opacity:1;transform:translateY(0)}
 
-  <script>
-    // Dark mode toggle
-    function toggleTheme() {
-      document.documentElement.classList.toggle('dark');
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:12px;
+      top:0;
+      width:2px;
+      height:0;
+      background:#fb923c;
+      transition:1.2s;
     }
+    .timeline.show::before{height:100%}
 
-    // Scroll animation
-    document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100','translate-y-0');
-          }
-        });
-      });
-      elements.forEach(el => observer.observe(el));
-    });
+    .dot{transform:scale(0);transition:.4s}
+    .dot.show{transform:scale(1)}
 
-    // Scroll highlight nav
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section');
-      const navLinks = document.querySelectorAll('.nav-link');
-
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('text-orange-400');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('text-orange-400');
-        }
-      });
-    });
-  </script>
+    .card{transition:.3s}
+    .card:hover{transform:translateX(6px)}
+  </style>
 </head>
 
-<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white font-sans dark:bg-white dark:text-black">
+<body class="bg-gray-900 text-white">
+<div class="max-w-6xl mx-auto px-4 py-10">
 
-<!-- Navbar -->
-<nav class="fixed top-0 w-full bg-black/50 backdrop-blur z-50 px-6 py-3 flex justify-between">
-  <div class="font-bold">TRUONG</div>
-  <div class="space-x-4 text-sm">
-    <a href="#about" class="nav-link">About</a>
-    <a href="#experience" class="nav-link">Experience</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#skills" class="nav-link">Skills</a>
-  </div>
-  <button onclick="toggleTheme()">🌗</button>
-</nav>
-
-<div class="max-w-6xl mx-auto px-4 pt-24 pb-10">
-
-<!-- About -->
-<section id="about" class="fade-in opacity-0 translate-y-6 transition-all duration-700">
+<!-- ABOUT -->
+<section class="fade-up">
   <h1 class="text-3xl font-bold">PHAM TRONG TRUONG</h1>
-  <p class="text-orange-400 font-semibold mt-2">Senior .NET Developer</p>
-  <p class="mt-4 text-gray-300 dark:text-gray-700">
-    5+ years experience in enterprise systems, microservices architecture, and high-performance backend.
-    Strong in system design, optimization, and large-scale data processing.
+  <p class="text-orange-400">Senior .NET Developer</p>
+  <p class="text-sm mt-2">📍 HCM | 📞 0353573467 | phamtruong0305@gmail.com</p>
+  <p class="mt-4 text-gray-300">
+    Nearly 5 years of experience in full-cycle software development, specializing in .NET ecosystem, microservices architecture, and scalable enterprise systems.
   </p>
 </section>
 
-<!-- Experience -->
-<section id="experience" class="mt-10 fade-in opacity-0 translate-y-6 transition-all duration-700">
-  <h2 class="text-xl font-bold mb-4">Experience</h2>
-
-  <div class="space-y-6">
-    <div class="p-4 bg-white/10 rounded-xl">
-      <h3 class="font-bold">FPT IS</h3>
-      <p class="text-sm text-gray-400">2023 - Present</p>
-      <p class="text-sm mt-2">Built HRM system, microservices, handled millions records</p>
-    </div>
-
-    <div class="p-4 bg-white/10 rounded-xl">
-      <h3 class="font-bold">FPT Telecom</h3>
-      <p class="text-sm text-gray-400">2021 - 2023</p>
-      <p class="text-sm mt-2">Payment integration, performance optimization</p>
-    </div>
+<!-- SKILLS -->
+<section class="mt-10 fade-up">
+  <h2 class="text-xl font-bold mb-4">Skills & Experience</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-300">
+    <div><b class="text-white">.NET / ASP.NET Core</b> – 5 years (Web API, MVC, Minimal API, EF Core, Dapper)</div>
+    <div><b class="text-white">Database</b> – 5 years (SQL Server, MySQL, query optimization, indexing)</div>
+    <div><b class="text-white">NodeJS</b> – 2 years (REST API, real-time with Socket)</div>
+    <div><b class="text-white">Frontend</b> – 2 years (ReactJS, basic UI integration)</div>
+    <div><b class="text-white">Architecture</b> – 3+ years (Microservices, event-driven, scalable systems)</div>
+    <div><b class="text-white">Messaging & Cache</b> – 3 years (RabbitMQ, Kafka, Redis)</div>
+    <div><b class="text-white">Cloud & DevOps</b> – 2+ years (Docker, CI/CD, cloud deployment)</div>
+    <div><b class="text-white">Security</b> – (JWT, OAuth2, data encryption, role-based & field-level permission)</div>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="mt-10 fade-in opacity-0 translate-y-6 transition-all duration-700">
-  <h2 class="text-xl font-bold mb-4">Projects</h2>
+<!-- TIMELINE -->
+<section class="mt-10 fade-up">
+  <h2 class="text-xl font-bold mb-6">Professional Timeline</h2>
 
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-white/10 rounded-xl overflow-hidden hover:scale-105 transition">
-      <img src="https://picsum.photos/500/300" class="w-full" />
-      <div class="p-4">
-        <h3 class="font-bold">HRM System</h3>
-        <p class="text-sm text-gray-300 mt-2">Microservices system with high scalability</p>
+  <div class="relative timeline pl-10 space-y-12">
+
+    <!-- FPT IS -->
+    <div class="relative">
+      <div class="absolute -left-[18px] top-1 w-4 h-4 bg-orange-400 rounded-full dot"></div>
+      <h3 class="font-bold text-lg">FPT IS - Developer</h3>
+      <p class="text-sm text-gray-400">10/2023 - Present</p>
+
+      <div class="mt-6 space-y-6">
+
+        <div class="card">
+          <b class="text-orange-300">PEOPLE X (04/2024 - Now)</b>
+          <p class="text-sm text-gray-300 mt-2">Enterprise HRM system for FPT Group supporting centralized HR operations across subsidiaries, including HR, Payroll, Tax, Insurance, and Timesheet modules.</p>
+          <ul class="text-sm text-gray-400 list-disc ml-5 mt-2 space-y-1">
+            <li>Develop backend APIs and core business logic using ASP.NET for enterprise-scale system</li>
+            <li>Key member of Integration module, handling synchronization between central system and subsidiaries</li>
+            <li>Design dynamic APIs with flexible permission system (field-level access control)</li>
+            <li>Implement encryption for sensitive data (salary, bank account, tax code, personal ID)</li>
+            <li>Build scheduled jobs to process and sync large-scale data across systems</li>
+            <li>Write unit tests, handle exceptions, and ensure system stability</li>
+            <li>Collaborate with BA, QA, DevOps to deliver features end-to-end</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <b class="text-orange-300">LABO (01/2024 - 03/2024)</b>
+          <p class="text-sm text-gray-300">Health tracking application for families, enabling activity tracking and reward systems for children.</p>
+          <ul class="text-sm text-gray-400 list-disc ml-5 mt-2">
+            <li>Develop backend APIs using NodeJS</li>
+            <li>Design detailed system flow and implement core features</li>
+            <li>Perform unit testing and ensure feature reliability</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <b class="text-orange-300">Fontwork (11/2023 - 12/2023)</b>
+          <p class="text-sm text-gray-300">SSO login system for multi-service platform.</p>
+            <ul class="text-sm text-gray-400 list-disc ml-5 mt-2">
+            <li>Develop backend APIs using NodeJS</li>
+            <li>Design detailed system flow and implement core features</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <b class="text-orange-300">Convenience Store POS (10/2023)</b>
+          <p class="text-sm text-gray-300"> Building software for an international convenience store chain, XXX. The goal is to develop a point-of-sale system for XXX stores that can also handle offline data synchronization to ensure uninterrupted operations even when connectivity is lost</p>
+             <p class="text-sm text-gray-300">SSO login system for multi-service platform.</p>
+            <ul class="text-sm text-gray-400 list-disc ml-5 mt-2">
+            <li>Develop backend APIs using NodeJS</li>
+            <li>Design detailed system flow and implement core features</li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
-    <div class="bg-white/10 rounded-xl overflow-hidden hover:scale-105 transition">
-      <img src="https://picsum.photos/500/301" class="w-full" />
-      <div class="p-4">
-        <h3 class="font-bold">E-commerce Platform</h3>
-        <p class="text-sm text-gray-300 mt-2">Handled payments, caching, large traffic</p>
+    <!-- FPT TELECOM -->
+    <div class="relative">
+      <div class="absolute -left-[18px] top-1 w-4 h-4 bg-orange-400 rounded-full dot"></div>
+      <h3 class="font-bold text-lg">FPT Telecom - Backend Developer</h3>
+      <p class="text-sm text-gray-400">05/2021 - 10/2023</p>
+
+      <div class="mt-6 space-y-6">
+
+        <div class="card">
+          <b class="text-orange-300">Register Online (2021 - 2023)</b>
+          <p class="text-sm text-gray-300">E-commerce platform providing telecom services (Internet, WiFi, Camera) with high traffic and large data processing.</p>
+          <ul class="text-sm text-gray-400 list-disc ml-5 mt-2">
+            <li>Develop and optimize APIs using ASP.NET MVC & ASP.NET Core</li>
+            <li>Handle large data queries and improve system performance</li>
+            <li>Integrate multiple payment gateways (Momo, Foxpay, Visa, Napas)</li>
+            <li>Build internal tools (reporting, order tracking, policy tools)</li>
+            <li>Monitor, maintain system and fix bugs in production</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <b class="text-orange-300">MOBIPAY (2022)</b>
+          <p class="text-sm text-gray-300">Customer Management and Billing Collection Application for FPT Telecom Field Agents.</p>
+          <ul class="text-sm text-gray-400 list-disc ml-5 mt-2">
+            <li>Develop and optimize APIs using ASP.NET MVC & ASP.NET Core</li>
+            <li>Handle large data queries and improve system performance</li>
+            <li>Monitor, maintain system and fix bugs in production</li>
+          </ul>
+        </div>
+
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- Skills -->
-<section id="skills" class="mt-10 fade-in opacity-0 translate-y-6 transition-all duration-700">
-  <h2 class="text-xl font-bold mb-4">Skills</h2>
-
-  <div class="space-y-4">
-    <div>
-      <p>.NET Core</p>
-      <div class="w-full bg-gray-700 h-2 rounded">
-        <div class="bg-orange-400 h-2 rounded w-[90%]"></div>
-      </div>
-    </div>
-
-    <div>
-      <p>SQL</p>
-      <div class="w-full bg-gray-700 h-2 rounded">
-        <div class="bg-orange-400 h-2 rounded w-[85%]"></div>
-      </div>
-    </div>
-  </div>
+<!-- EDUCATION -->
+<section class="mt-10 fade-up">
+  <h2 class="text-xl font-bold">Education</h2>
+  <p class="text-gray-300">University of Transport and Communications (2018 - 2022)</p>
 </section>
 
 </div>
+
+<script>
+const ob=new IntersectionObserver(e=>{
+ e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')})
+})
+
+document.querySelectorAll('.fade-up,.dot,.timeline').forEach(el=>ob.observe(el))
+</script>
 
 </body>
 </html>
