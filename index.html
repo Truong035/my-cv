@@ -4,105 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phạm Trọng Trường - Senior .NET Developer</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
-        .skill-tag { transition: all 0.3s ease; border: 1px solid transparent; }
-        .skill-tag:hover { transform: scale(1.1); border-color: #3b82f6; background: #eff6ff; color: #1d4ed8; }
-        .timeline-dot { width: 16px; height: 16px; background: #3b82f6; border: 4px solid #fff; box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2); }
-        .gradient-text { background: linear-gradient(90deg, #3b82f6, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: white; }
+        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 1.5rem; }
+        .skill-tag { background: #1e293b; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; border: 1px solid #334155; }
+        /* Đảm bảo chữ tiêu đề luôn có màu trắng để dễ thấy */
+        #typed { color: #60a5fa; font-weight: bold; }
+        .typed-cursor { color: white; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+<body class="overflow-x-hidden">
 
-    <section class="min-h-screen flex items-center justify-center bg-slate-900 text-white relative px-4">
-        <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
-        <div class="max-w-4xl w-full z-10 text-center" data-aos="zoom-in">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">PHẠM TRỌNG TRƯỜNG</h1>
-            <div class="text-2xl md:text-3xl font-light text-blue-400 mb-8 h-12">
-                <span id="typed"></span>
+    <section class="min-h-screen flex items-center justify-center relative px-4 text-center">
+        <div class="z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight" data-aos="fade-down">
+                PHẠM TRỌNG TRƯỜNG
+            </h1>
+            
+            <div class="text-2xl md:text-4xl h-16">
+                <span id="typed">Senior .NET Developer</span>
             </div>
-            <div class="flex flex-wrap justify-center gap-6 text-gray-300 mb-10">
+
+            <div class="flex flex-wrap justify-center gap-6 text-gray-400 my-10" data-aos="fade-up" data-aos-delay="200">
                 <span><i class="fas fa-code-branch mr-2"></i> Nearly 5 Years Exp</span>
-                <span><i class="fas fa-map-marker-alt mr-2"></i> Ho Chi Minh City</span>
                 <span><i class="fas fa-envelope mr-2"></i> phamtruong0305@gmail.com</span>
+                <span><i class="fas fa-map-marker-alt mr-2"></i> District 7, HCM</span>
             </div>
-            <a href="#experience" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl">
-                Explore My Journey <i class="fas fa-chevron-down ml-2"></i>
+
+            <a href="#experience" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-blue-500/50">
+                XEM KINH NGHIỆM <i class="fas fa-arrow-down ml-2"></i>
             </a>
         </div>
     </section>
 
-    <main class="max-w-5xl mx-auto py-20 px-6">
+    <main id="experience" class="max-w-5xl mx-auto py-20 px-6">
+        <h2 class="text-3xl font-bold mb-12 border-l-4 border-blue-500 pl-4" data-aos="fade-right">KINH NGHIỆM LÀM VIỆC</h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
-            <div class="md:col-span-1" data-aos="fade-right">
-                <h2 class="text-3xl font-bold mb-6 gradient-text uppercase">Giới thiệu</h2>
-                <p class="text-slate-600 leading-relaxed text-justify">
-                    Một Software Developer đầy nhiệt huyết với thế mạnh cốt lõi là hệ sinh thái <b>.NET</b> và <b>Node.js</b>. Tôi không chỉ viết code, tôi xây dựng giải pháp kiến trúc bền vững như Microservices và API Gateway. Với tư duy "Can-do", tôi luôn sẵn sàng chinh phục các công nghệ mới nhất như .NET 9 và Cloud Native.
-                </p>
+        <div class="space-y-12">
+            <div class="glass-card" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                    <h3 class="text-xl font-bold text-blue-400">FPT IS - Software Developer</h3>
+                    <span class="text-gray-400">10/2023 - Nay</span>
+                </div>
+                <p class="font-semibold mb-2 italic">Dự án: PeopleX (HR Management System)</p>
+                <ul class="text-gray-300 list-disc ml-5 space-y-2">
+                    <li>Xây dựng module Integration kết nối hệ thống vệ tinh qua Kong Gateway & RabbitMQ.</li>
+                    <li>Mã hóa dữ liệu nhạy cảm và phân quyền API linh hoạt mức field-level.</li>
+                </ul>
             </div>
-            <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8" data-aos="fade-left">
-                <div class="glass-card p-6 rounded-2xl shadow-sm border border-slate-200">
-                    <h3 class="font-bold mb-4 flex items-center"><i class="fas fa-server mr-2 text-blue-600"></i> Backend Mastery</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg text-sm italic">.NET 9/Core</span>
-                        <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg text-sm italic">Node.js</span>
-                        <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg text-sm italic">Microservices</span>
-                        <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg text-sm italic">RabbitMQ/Kafka</span>
-                        <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg text-sm italic">Redis/Oauth2</span>
-                    </div>
+
+            <div class="glass-card" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                    <h3 class="text-xl font-bold text-blue-400">FPT Telecom - Backend Developer</h3>
+                    <span class="text-gray-400">05/2021 - 10/2023</span>
                 </div>
-                <div class="glass-card p-6 rounded-2xl shadow-sm border border-slate-200">
-                    <h3 class="font-bold mb-4 flex items-center"><i class="fas fa-laptop-code mr-2 text-blue-600"></i> Frontend & Data</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg text-sm italic">ReactJS</span>
-                        <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg text-sm italic">Radzen Blazor</span>
-                        <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg text-sm italic">PostgreSQL</span>
-                        <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg text-sm italic">MongoDB</span>
-                        <span class="skill-tag px-3 py-1 bg-slate-100 rounded-lg text-sm italic">Docker/CI-CD</span>
-                    </div>
-                </div>
+                <p class="font-semibold mb-2 italic">Dự án: Register Online (shop.fpt.vn)</p>
+                <ul class="text-gray-300 list-disc ml-5 space-y-2">
+                    <li>Tích hợp các cổng thanh toán (Momo, Foxpay, Visa) và xử lý Big Data trên MongoDB.</li>
+                </ul>
             </div>
         </div>
+    </main>
 
-        <section id="experience" class="mb-24">
-            <h2 class="text-3xl font-bold mb-12 text-center uppercase tracking-widest" data-aos="fade-up">Professional Experience</h2>
-            
-            <div class="relative border-l-2 border-slate-200 ml-4 md:ml-0">
-                
-                <div class="mb-16 ml-8 relative" data-aos="fade-up">
-                    <div class="timeline-dot absolute -left-[41px] top-1"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <div>
-                            <h3 class="text-2xl font-bold text-slate-800 italic">FPT IS - Software Developer</h3>
-                            <p class="text-blue-600 font-semibold">Project: PEOPLE X (HR Management System)</p>
-                        </div>
-                        <span class="text-sm font-bold bg-blue-100 text-blue-700 px-4 py-1 rounded-full mt-2 md:mt-0">10/2023 - PRESENT</span>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl shadow-md border-l-4 border-blue-600">
-                        <p class="text-slate-700 mb-4">Tham gia phát triển hệ thống quản trị nhân sự tổng thể cho tập đoàn FPT, hỗ trợ vận hành tập trung cho hàng chục công ty con.</p>
-                        <ul class="space-y-3 text-slate-600">
-                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i> <span><b>Integration Core:</b> Xây dựng module INT xử lý đồng bộ dữ liệu giữa core và vệ tinh qua Kong Gateway & RabbitMQ.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i> <span><b>Security First:</b> Thực thi mã hóa dữ liệu nhạy cảm (Lương, ID, Thuế) và phân quyền Dynamic API mức field-level.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i> <span><b>Performance:</b> Tối ưu hóa các tiến trình Batch Job xử lý dữ liệu lớn định kỳ, đảm bảo tính nhất quán hệ thống.</span></li>
-                        </ul>
-                    </div>
-                </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-                <div class="mb-16 ml-8 relative" data-aos="fade-up">
-                    <div class="timeline-dot absolute -left-[41px] top-1"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <div>
-                            <h3 class="text-2xl font-bold text-slate-800 italic">FPT TELECOM - Backend Developer</h3>
-                            <p class="text-blue-600 font-semibold">Project: REGISTER ONLINE (shop.fpt.vn)</p>
-                        </div>
-                        <span class="text-sm font-bold bg-slate-200 text-slate-700 px-4 py-
+    <script>
+        // Đợi toàn bộ trang web load xong mới chạy script
+        window.onload = function() {
+            // Khởi tạo hiệu ứng xuất hiện
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ duration: 800, once: true });
+            }
+
+            // Khởi tạo hiệu ứng gõ chữ
+            if (document.getElementById('typed') && typeof Typed !== 'undefined')
